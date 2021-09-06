@@ -4,9 +4,9 @@ Using a pair of ESP32s to create a remote control for a Hoverboard controller (E
 ## What is it?
 There are a couple of outstanding projects available on GitHub using the motors and controllers from the cheap, Chinese made "HoverBoards" (also called balance boards or balance scooters in some parts of the world) as a convenient source of power and motive force for mobile projects:-
 
-[Niklas Fauth's Original Hoverboard Hack](https://github.com/NiklasFauth/hoverboard-firmware-hack)
-[Emanuel Feru's Field Oriented Control Version](https://github.com/EmanuelFeru/hoverboard-firmware-hack-FOC)
-[Florian's Dual-Controller-Board Version](https://github.com/flo199213/Hoverboard-Firmware-Hack-Gen2)
+- [Niklas Fauth's Original Hoverboard Hack](https://github.com/NiklasFauth/hoverboard-firmware-hack)
+- [Emanuel Feru's Field Oriented Control Version](https://github.com/EmanuelFeru/hoverboard-firmware-hack-FOC)
+- [Florian's Dual-Controller-Board Version](https://github.com/flo199213/Hoverboard-Firmware-Hack-Gen2)
 
 This project provides a low cost remote control (currently for the FOC version, but should be easily adaptable to the others) using two ESP32 modules; one for the Hoverboard controller (the receiver) and one as a standalone, portable, simple remote control unit.  The two ESP32s communicate using Espressif's own,lightweight ESP-Now protocol (WiFi connectivity over the normally assigned 2.4GHz channels, but point-to-point, with no access-point involved).
 
