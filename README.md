@@ -17,6 +17,7 @@ The project features:-
 - Heartbeat between the remote control and hoverboard controller triggering an emergency stop when out of range.
 - Auto heartbeat between the hoverboard controller motherboard and the attached ESP32 to ensure the motherboard firmware doesn't timeout.
 - Auto-stop at power-on to ensure that the mobile unit doesn't get unintended commands during start-up.
+- The ESP32 attached to the hoverboard motherboard communicates using its UART2 serial hardware, *not* SoftwareSerial.
 - Incremental forward/back directional control and steering.
 
 While the project is at a fairly early stage, it is already operational and will provide a crude (but working) remote control for a mobile project.
@@ -24,4 +25,6 @@ While the project is at a fairly early stage, it is already operational and will
 ## How to build it
 The project is presented here as a complete PlatformIO project directory, but can easily be compiled under the Arduino IDE.
 
+### Current status
+The project code is a mess ...but it does work!
 
