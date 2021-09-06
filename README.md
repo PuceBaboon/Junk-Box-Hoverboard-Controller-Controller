@@ -25,6 +25,14 @@ While the project is at a fairly early stage, it is already operational and will
 ## How to build it
 The project is presented here as a complete PlatformIO project directory, but can easily be compiled under the Arduino IDE.
 
+There are two separate src files:-
+
+- espnowHB.ino  Is the source file for the HB-controller-controller (attaches to the motherboard UART).
+- espnowRC.ino  Is the Remote Control source.
+
+*Only one of the files can be compiled at a time*, so to compile the RC version, just move espnowHB.ino up out of the source directory and vice-versa for the HB-controller-controller.
+If someone knows the magic platformio incantation for doing this without having two thousand #ifdefs in the source, please drop me a note.
+
 ### Current status
 The project code is a mess ...but it *does* work!
 
