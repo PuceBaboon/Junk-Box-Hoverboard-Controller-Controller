@@ -36,3 +36,11 @@ If someone knows the magic platformio incantation for doing this without having 
 ### Current status
 The project code is a mess ...but it *does* work!
 
+###### Why "Junk-Box-Hoverboard-Controller-Controller"
+The hoverboard itself has a controller board (some of them have two) which takes feedback from the foot-switches, MPU-6050 gyro and hall-effect switches inside the motors and powers the motors based on the feedback (I occasionally use the term "motherboard", both here and in the source code, to make it clear that I'm talking about this hoverboard internal controller).
+
+We use two ESP32s in this project.  One is used for the remote control unit.  It send data to a second unit via the ESP-Now protocol.
+
+This second ESP32 is attached to the hoverboard internal controller via a serial cable.  Based on input from the remote control unit, it sends commands to the motherboard to control the speed and direction of the motors.  Thus it is the "hoverboard controller controller".
+
+As for the "Junk-Box" part; you can see from the pictures that both of the ESP32 units were built from parts which were on hand.  Some parts are new "old stock" (resistors, capacitors, switches), while others were salvaged from older projects, or scavenged from other sources.  I did buy a couple of second-hand hoverboards (both advertised as "junk") for parts, but nothing was bought new for this specific project (so far, anyway).
