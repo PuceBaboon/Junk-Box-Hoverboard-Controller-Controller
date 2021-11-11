@@ -18,9 +18,11 @@ The project features:-
 - Auto heartbeat between the hoverboard controller motherboard and the attached ESP32 to ensure the motherboard firmware doesn't timeout.
 - Auto-stop at power-on to ensure that the mobile unit doesn't get unintended commands during start-up.
 - The ESP32 attached to the hoverboard motherboard communicates using its UART2 serial hardware, *not* SoftwareSerial.
+- There is a separate, ESP8266 "listener" which receives Hoverboard feedback from the ESP32 and displays it on a laptop.
 - Incremental forward/back directional control and steering.
 
 While the project is at a fairly early stage, it is already operational and will provide a crude (but working) remote control for a mobile project.
+The ESP8266 (actually, an ESP01S on a USB adapter card) helps with debugging by enabling display of the Hoverboard feedback packets in real time on a laptop.  This allows immediate comparison of the RPM of both wheels, as well as steering and speed data, while actually sending commands from the remote-control unit. The separate ESP is needed because both of the ESP32 modules are using the ESP-Now protocol, not regular WiFi and so cannot send the data directly to the laptop.
 
 ## How to build it
 The project is presented here as a complete PlatformIO project directory, but can easily be compiled under the Arduino IDE.
